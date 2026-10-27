@@ -1,0 +1,19 @@
+# input data (not distributed; see README)
+input_files/
+00_data/
+
+# script outputs
+01_permanova/
+02_hurdle_models/
+03a_host_DE/
+04a_networks_DE_genes/
+05a_gene_annotation/
+05b_figures/
+
+# R and system files
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+.DS_Store
+Thumbs.db

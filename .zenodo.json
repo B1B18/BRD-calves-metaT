@@ -1,0 +1,28 @@
+{
+  "title": "Analysis scripts for: [MANUSCRIPT TITLE]",
+  "description": "R scripts used to analyse nasal swab metatranscriptomes (viruses, bacteria and host transcriptome) from pre-weaned dairy calves in New South Wales, Australia: PERMANOVA, hurdle mixed models, host differential expression (limma-voom), host-taxon correlation networks, gene annotation and figures. Raw reads: NCBI BioProject PRJNA1191164.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Brito, Barbara",
+      "affiliation": "Elizabeth Macarthur Agricultural Institute, NSW Department of Primary Industries and Regional Development",
+      "orcid": "[ORCID]"
+    }
+  ],
+  "keywords": [
+    "metatranscriptomics",
+    "bovine respiratory disease",
+    "dairy calves",
+    "host transcriptome",
+    "microbiome"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1191164",
+      "relation": "references",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Funding: DairyUP, Australian Research Council Linkage Project LP220100202, Dairy Australia, McGarvie Smith Institute."
+}
