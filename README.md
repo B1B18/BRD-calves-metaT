@@ -1,8 +1,8 @@
 # Nasal metatranscriptomics of pre-weaned dairy calves with and without respiratory disease
 
-This repository contains the R scripts used to analyse the data in the manuscript "[MANUSCRIPT TITLE]" by Brito et al. (submitted to *Microbiome*).
+This repository contains the R scripts used to analyse the data in the manuscript "An integrated metatranscriptomic study of viruses, bacteria and host transcriptional signatures in nasal swabs from pre-weaned dairy calves with and without respiratory disease" by Brito et al. 
 
-The study profiles viruses, bacteria and the host transcriptome in nasal swab metatranscriptomes from pre-weaned dairy calves sampled on commercial dairy farms in New South Wales, Australia. The scripts reproduce the statistical analyses, tables and figures reported in the manuscript. The usage of each script is described below and in the header of each script.
+The study profiles viruses, bacteria and the host transcriptome in nasal swab metatranscriptomes from pre-weaned dairy calves sampled on dairy farms in Australia. The scripts reproduce the statistical analyses, tables and figures reported in the manuscript. The usage of each script is described below and in the header of each script.
 
 ## Data
 
@@ -11,11 +11,11 @@ The raw sequencing reads (Illumina NovaSeq X, 150 bp paired-end) are deposited i
 Reads were processed upstream of these scripts, as described in the Methods of the manuscript:
 
 - Host read removal and rRNA depletion (Hostile, SortMeRNA)
-- Viral abundance: de novo assembly and read mapping to a custom bovine viral reference database [DATABASE REFERENCE/DOI], summarised as normalised abundance per viral species
+- Viral abundance: de novo assembly and read mapping to a custom bovine viral reference database 10.5281/zenodo.21867952, summarised as normalised abundance per viral species
 - Bacterial taxonomy: MetaPhlAn 4 with the GTDB taxonomy (r220), summarised as read counts per genus
 - Host gene expression: nf-core/rnaseq (STAR–RSEM) against the bovine reference genome ARS-UCD1.2, summarised as gene-level counts
 
-The processed tables produced by these steps are the inputs of the scripts. They are not included in this repository; [AVAILABILITY STATEMENT, e.g. "they are available from Zenodo (DOI)" or "from the corresponding author on reasonable request"]. The scripts expect the following files, with paths relative to the repository root:
+ The scripts expect the following files, with paths relative to the repository root:
 
 - `input_files/metadata.csv`: one row per sequenced sample: `Sample_id`, clinical `Status`, `Age_days` (age in days where recorded as a single value), `Age_group` (<25 / >=25 days), `Farm_Number`, `Total_paired_reads`, and the logical flags `has_virus`, `has_bacteria` and `has_host` (sample has viral, bacterial and host data)
 - `input_files/taxa_long.csv`: long-format microbial table: `Sample_id`, `taxon`, `taxon_label` (abbreviation used in the figures), `type` (`virus` or `bacteria`) and `value` (normalised abundance for viruses, read counts for bacterial genera)
