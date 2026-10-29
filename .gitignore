@@ -1,7 +1,3 @@
-# input data (not distributed; see README)
-input_files/
-00_data/
-
 # script outputs
 01_permanova/
 02_hurdle_models/

@@ -1,6 +1,6 @@
 {
-  "title": "Analysis scripts for: [MANUSCRIPT TITLE]",
-  "description": "R scripts used to analyse nasal swab metatranscriptomes (viruses, bacteria and host transcriptome) from pre-weaned dairy calves in New South Wales, Australia: PERMANOVA, hurdle mixed models, host differential expression (limma-voom), host-taxon correlation networks, gene annotation and figures. Raw reads: NCBI BioProject PRJNA1191164.",
+  "title": "Analysis scripts and processed data for: An integrated metatranscriptomic study of viruses, bacteria and host transcriptional signatures in nasal swabs from pre-weaned dairy calves with and without respiratory disease",
+  "description": "R scripts and processed input data used to analyse nasal swab metatranscriptomes (viruses, bacteria and host transcriptome) from pre-weaned dairy calves in Australia: PERMANOVA, hurdle mixed models, host differential expression (limma-voom), host-taxon correlation networks, gene annotation and figures. Code: MIT licence; data in input_files/: CC BY 4.0. Raw reads: NCBI BioProject PRJNA1191164.",
   "upload_type": "software",
   "license": "MIT",
   "creators": [
@@ -22,6 +22,11 @@
       "identifier": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1191164",
       "relation": "references",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.21867952",
+      "relation": "references",
+      "scheme": "doi"
     }
   ],
   "notes": "Funding: DairyUP, Australian Research Council Linkage Project LP220100202, Dairy Australia, McGarvie Smith Institute."

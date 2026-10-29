@@ -7,7 +7,7 @@
 #   Section A  Viral species     normalised abundance; log1p;
 #                                Euclidean distance
 #   Section B  Bacterial genera  ALL genera in the GTDB genus table
-#                                (00_data/all_merged_meta_gtdb_genus.txt);
+#                                (input_files/all_merged_meta_gtdb_genus.txt);
 #                                reads per 6e7 paired reads; log1p;
 #                                Euclidean distance
 #   Section C  Host transcriptome genes retained by filterByExpr;
@@ -63,7 +63,7 @@
 #   input_files/metadata.csv        Status, Age_group, Farm_Number, Total_paired_reads
 #   input_files/taxa_long.csv       viral normalised abundance
 #   input_files/host_counts.csv.gz  RSEM gene counts
-#   00_data/all_merged_meta_gtdb_genus.txt  bacterial read counts, genera x samples
+#   input_files/all_merged_meta_gtdb_genus.txt  bacterial read counts, genera x samples
 #
 # Outputs (01_permanova/)
 #   log.txt                            full console log + session information
@@ -92,7 +92,7 @@ suppressPackageStartupMessages({
 })
 
 in_dir    <- "input_files"
-bact_file <- file.path("00_data", "all_merged_meta_gtdb_genus.txt")
+bact_file <- file.path(in_dir, "all_merged_meta_gtdb_genus.txt")
 out_dir   <- "01_permanova"
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 

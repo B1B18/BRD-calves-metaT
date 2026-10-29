@@ -11,17 +11,17 @@ The raw sequencing reads (Illumina NovaSeq X, 150 bp paired-end) are deposited i
 Reads were processed upstream of these scripts, as described in the Methods of the manuscript:
 
 - Host read removal and rRNA depletion (Hostile, SortMeRNA)
-- Viral abundance: de novo assembly and read mapping to a custom bovine viral reference database 10.5281/zenodo.21867952, summarised as normalised abundance per viral species
+- Viral abundance: de novo assembly and read mapping to a custom bovine viral reference database ([doi:10.5281/zenodo.21867952](https://doi.org/10.5281/zenodo.21867952)), summarised as normalised abundance per viral species
 - Bacterial taxonomy: MetaPhlAn 4 with the GTDB taxonomy (r220), summarised as read counts per genus
 - Host gene expression: nf-core/rnaseq (STAR–RSEM) against the bovine reference genome ARS-UCD1.2, summarised as gene-level counts
 
- The scripts expect the following files, with paths relative to the repository root:
+The processed tables produced by these steps, which are the inputs of the scripts, are in the `input_files/` folder. Its README describes each file and its columns:
 
-- `input_files/metadata.csv`: one row per sequenced sample: `Sample_id`, clinical `Status`, `Age_days` (age in days where recorded as a single value), `Age_group` (<25 / >=25 days), `Farm_Number`, `Total_paired_reads`, and the logical flags `has_virus`, `has_bacteria` and `has_host` (sample has viral, bacterial and host data)
-- `input_files/taxa_long.csv`: long-format microbial table: `Sample_id`, `taxon`, `taxon_label` (abbreviation used in the figures), `type` (`virus` or `bacteria`) and `value` (normalised abundance for viruses, read counts for bacterial genera)
-- `input_files/host_counts.csv.gz`: host gene counts (RSEM), with a `gene_id` column followed by one column per sample
-- `00_data/all_merged_meta_gtdb_genus.txt`: MetaPhlAn 4 read counts for all bacterial genera (GTDB), with a `clade_name` column followed by one column per sample (used by `01_permanova.R` only)
-- `input_files/input_annotations.rds` (optional): cache of the Ensembl BioMart query (release 115) used by `05a_gene_annotation.R`; if absent, the script queries Ensembl directly
+- `metadata.csv`: sample metadata (clinical status, age, anonymised farm code, sequencing depth)
+- `taxa_long.csv`: viral normalised abundance and bacterial read counts per sample and taxon
+- `host_counts.csv.gz`: host gene-level read counts
+- `all_merged_meta_gtdb_genus.txt`: MetaPhlAn 4 read counts for all bacterial genera (used by `01_permanova.R` only)
+- `input_annotations.rds`: cache of the Ensembl BioMart query (release 115) used by `05a_gene_annotation.R`, so the published gene annotation can be reproduced without querying Ensembl
 
 ## Scripts
 
@@ -57,10 +57,10 @@ The exact package versions used are listed in the session information at the end
 
 If you use these scripts, please cite the manuscript:
 
-Brito B, et al. [MANUSCRIPT TITLE]. [JOURNAL, YEAR]. [DOI]
+Brito B, et al. An integrated metatranscriptomic study of viruses, bacteria and host transcriptional signatures in nasal swabs from pre-weaned dairy calves with and without respiratory disease. [JOURNAL, YEAR]. [DOI]
 
 and this repository: [ZENODO DOI]
 
 ## License
 
-The code is released under the MIT License (see `LICENSE`).
+The code in `scripts/` is released under the MIT License (see `LICENSE`). The data in `input_files/` are released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
