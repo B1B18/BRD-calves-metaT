@@ -15,7 +15,7 @@ Reads were processed upstream of these scripts, as described in the Methods of t
 - Bacterial taxonomy: MetaPhlAn 4 with the GTDB taxonomy (r220), summarised as read counts per genus
 - Host gene expression: nf-core/rnaseq (STAR–RSEM) against the bovine reference genome ARS-UCD1.2, summarised as gene-level counts
 
-The processed tables produced by these steps, which are the inputs of the scripts, are in the `input_files/` folder. Its README describes each file and its columns:
+The processed tables produced by these steps are the inputs of the scripts, which read them from the `input_files/` folder. The README in that folder describes each file and its columns:
 
 - `metadata.csv`: sample metadata (clinical status, age, anonymised farm code, sequencing depth)
 - `taxa_long.csv`: viral normalised abundance and bacterial read counts per sample and taxon
@@ -61,4 +61,4 @@ Brito B, et al. An integrated metatranscriptomic study of viruses, bacteria and 
 
 ## License
 
-The code in `scripts/` is released under the MIT License (see `LICENSE`). The data in `input_files/` are released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+The code in `scripts/` is released under the MIT License (see `LICENSE`). Data files in `input_files/` are released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
