@@ -55,11 +55,9 @@ The exact package versions used are listed in the session information at the end
 
 ## Citation
 
-If you use these scripts, please cite the manuscript:
+If you use these scripts or data, please cite the archived version of this repository on Zenodo (the DOI is shown on the Zenodo record) and the associated manuscript:
 
-Brito B, et al. An integrated metatranscriptomic study of viruses, bacteria and host transcriptional signatures in nasal swabs from pre-weaned dairy calves with and without respiratory disease. [JOURNAL, YEAR]. [DOI]
-
-and this repository: [ZENODO DOI]
+Brito B, et al. An integrated metatranscriptomic study of viruses, bacteria and host transcriptional signatures in nasal swabs from pre-weaned dairy calves with and without respiratory disease. Manuscript submitted for publication.
 
 ## License
 
